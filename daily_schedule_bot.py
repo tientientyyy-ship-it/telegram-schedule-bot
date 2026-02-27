@@ -124,7 +124,6 @@ async def delete_task(event):
         await event.reply(f"🗑️ **Đã xóa:** `{hour}`", buttons=MAIN_MENU)
     else:
         await event.reply("❌ Không tìm thấy giờ này!")
-
 @client.on(events.NewMessage(pattern='/reset'))
 async def reset(event):
     user_id = event.sender_id
@@ -156,3 +155,4 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
