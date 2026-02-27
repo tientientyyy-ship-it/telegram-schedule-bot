@@ -147,15 +147,12 @@ async def reminder_loop():
         await asyncio.sleep(60)  # Check mỗi phút
 
 # START
+import asyncio
+
 async def main():
-    print("🤖 Schedule Bot 24/7 starting...")
-    asyncio.create_task(reminder_loop())
-    print("✅ Bot running! Deployed on Railway!")
+    await client.start(bot_token=BOT_TOKEN)
+    print("Bot is running...")
     await client.run_until_disconnected()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())
-
-
-
-
