@@ -24,7 +24,7 @@ DEFAULT_SCHEDULE = {
     "23:00": ["😴 Ngủ đúng giờ"]
 }
 
-client = TelegramClient(StringSession(), API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+client = TelegramClient("bot_session", api_id, api_hash)
 
 # Storage cho mỗi user
 user_data = defaultdict(lambda: {
@@ -155,5 +155,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 
 
