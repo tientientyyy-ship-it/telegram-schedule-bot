@@ -8,9 +8,9 @@ import logging
 from collections import defaultdict
 
 # CONFIG (Railway sẽ set qua Environment Variables)
-API_ID = int(os.getenv('30475514'))
-API_HASH = os.getenv('80fd530f75c492058515eb956c1d66e1')
-BOT_TOKEN = os.getenv('8236006228:AAE5_axnMNh85f1wzfMd5IFI8ed12MCCZ9M')
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Mặc định schedule (mỗi user override riêng)
 DEFAULT_SCHEDULE = {
@@ -155,4 +155,5 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 
